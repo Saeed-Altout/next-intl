@@ -9,7 +9,6 @@ export default function Home({
   params: { locale: any };
 }) {
   unstable_setRequestLocale(locale);
-
   const t = useTranslations("IndexPage");
 
   return (
