@@ -1,13 +1,10 @@
 "use client";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import React from "react";
 
-const About = ({ params: { locale } }: { params: { locale: any } }) => {
-  unstable_setRequestLocale(locale);
-
+const page = () => {
   const t = useTranslations("IndexPage");
   return (
     <div>
@@ -20,4 +17,4 @@ const About = ({ params: { locale } }: { params: { locale: any } }) => {
   );
 };
 
-export default About;
+export default page;
