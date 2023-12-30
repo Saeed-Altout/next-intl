@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
+const About = () => {
   const t = useTranslations("IndexPage");
   return (
     <div>
@@ -17,4 +17,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default About;
