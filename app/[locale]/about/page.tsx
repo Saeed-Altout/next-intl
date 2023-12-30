@@ -1,12 +1,9 @@
 import LocaleSwitcher from "@/components/LocaleSwitcher";
-import { useTranslations, useLocale } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
 const About = () => {
-  const locale = useLocale();
-  unstable_setRequestLocale(locale);
   const t = useTranslations("IndexPage");
   return (
     <div>
