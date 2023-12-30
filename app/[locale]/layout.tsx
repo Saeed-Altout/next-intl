@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { locales } from "@/config";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: any };
 }) {
+  unstable_setRequestLocale(locale);
   const messages = useMessages();
 
   return (

@@ -1,5 +1,6 @@
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 
 export default function Home({
@@ -7,6 +8,8 @@ export default function Home({
 }: {
   params: { locale: any };
 }) {
+  unstable_setRequestLocale(locale);
+
   const t = useTranslations("IndexPage");
 
   return (
